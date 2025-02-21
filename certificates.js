@@ -24,7 +24,7 @@ var certificates = [
     { name: "زياد ناصر", pdf: "certificates/ziad_nasser.pdf" },
     { name: "حسام الدين", pdf: "certificates/hesham_eldin.pdf" },
     { name: " همام احمد حسين", pdf: "certificates/همام احمد.pdf" },
-    { name: "رائد سعيد", pdf: "certificates/raed_saeed.pdf" },
+    { name: " احمد عبدالمطلب رضا", pdf: "certificates/احمد عبد.pdf" },
     { name: "نهى عبدالعزيز", pdf: "certificates/noha_abdulaziz.pdf" },
     { name: "وائل أحمد", pdf: "certificates/wael_ahmed.pdf" },
     { name: "دينا مجدي", pdf: "certificates/dina_magdy.pdf" },
