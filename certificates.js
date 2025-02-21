@@ -13,7 +13,7 @@ var certificates = [
     { name: " الاء لطيف احمد", pdf: "certificates/الاء لطيف.pdf" },
     { name: " مُقدس سجاد رزاق", pdf: "certificates/مُقدس سجاد رزاق.pdf" },
     { name: " امير صباح هشام", pdf: "certificates/امير صباح.pdf" },
-    { name: "سناء علي", pdf: "certificates/sanaa_ali.pdf" },
+     { name: " بنين علي ردام", pdf: "certificates/بنين.pdf" },
     { name: "عمر إبراهيم", pdf: "certificates/omar_ibrahim.pdf" },
     { name: "ياسمين نبيل", pdf: "certificates/yasmeen_nabeel.pdf" },
     { name: "طارق عبدالكريم", pdf: "certificates/tariq_abdulkarim.pdf" },
