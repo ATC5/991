@@ -5,7 +5,7 @@ var certificates = [
     { name: " مريم مهدي رشيد", pdf: "certificates/مريم مهدي.pdf" },
     { name: " هبه نشأت عبد الزهرة", pdf: "certificates/هبه نشأت.pdf" },
     { name: " احمد علي عبد الوهاب", pdf: "certificates/احمد علي.pdf" },
-    { name: " نبأ عبد الباسط", pdf: "certificates/نبا.pdf" },
+    { name: " نبأ عبد الباسط" ,pdf: "certificates/نبا.pdf" },
     { name: " يسر زياد طارق", pdf: "certificates/يسر.pdf" },
     { name: " علي صفاء الدين حسن", pdf: "certificates/علي ص.pdf" },
     { name: " عبدالله محمود جلوب", pdf: "certificates/عبدالله محمود.pdf" },
