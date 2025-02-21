@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> شهادات دورة الطيران والمراقبة الجوية</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>شهادات المشاركين في دورة الطيران والمراقبة الجوية</h1>
+       <p style="font-size: larger; color: #190d50;">المهندس: علي حيدر اموري</p>
+        <input type="text" id="searchBox" placeholder="ابحث عن اسمك..." onkeyup="searchCertificate()">
+        <div id="certificatesList"></div>
+    </div>
+
+    <script src="certificates.js"></script>
+    <script>
+        // تحميل الشهادات عند فتح الصفحة
+        document.addEventListener("DOMContentLoaded", function() {
+            displayCertificates();
+        });
+
+        function displayCertificates() {
+            var certificatesDiv = document.getElementById("certificatesList");
+            certificatesDiv.innerHTML = "";
+
+            certificates.forEach(cert => {
+                var certificateItem = document.createElement("div");
+                certificateItem.className = "certificate";
+                certificateItem.innerHTML = `
+                    <p><strong>الاسم:</strong> ${cert.name}</p>
+                    <a href="${cert.pdf}" target="_blank">عرض الشهادة</a>
+                `;
+                certificatesDiv.appendChild(certificateItem);
+            });
+        }
+
+        function searchCertificate() {
+            var searchInput = document.getElementById("searchBox").value.toLowerCase();
+            var certificatesDiv = document.getElementById("certificatesList");
+            certificatesDiv.innerHTML = "";
+
+            certificates.forEach(cert => {
+                if (cert.name.toLowerCase().includes(searchInput)) {
+                    var certificateItem = document.createElement("div");
+                    certificateItem.className = "certificate";
+                    certificateItem.innerHTML = `
+                        <p><strong>الاسم:</strong> ${cert.name}</p>
+                        <a href="${cert.pdf}" target="_blank">عرض الشهادة</a>
+                    `;
+                    certificatesDiv.appendChild(certificateItem);
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
