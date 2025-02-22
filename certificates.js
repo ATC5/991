@@ -33,7 +33,7 @@ var certificates = [
     { name: "بلال عمر", pdf: "certificates/bilal_omar.pdf" },
     { name: "فرح محمد", pdf: "certificates/farah_mohamed.pdf" },
     { name: "جواد سليم", pdf: "certificates/jawad_salim.pdf" },
-    { name: "نادر عادل", pdf: "certificates/nader_adel.pdf" },
+    { name: "فرقان محسن خلف", pdf: "certificates/فرقان.pdf" },
     { name: "زينب حسن", pdf: "certificates/zeinab_hassan.pdf" },
     { name: "عبدالرحمن سامي", pdf: "certificates/abdurrahman_sami.pdf" },
     { name: "لمياء طارق", pdf: "certificates/lamia_tariq.pdf" },
