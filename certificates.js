@@ -20,7 +20,7 @@ var certificates = [
     { name: "مهيمن حيدر طالب", pdf: "certificates/Muhemn Haidar Talib.pdf" },
     { name: "مريم عبدالمجيد", pdf: "certificates/mariam_abdelmageed.pdf" },
     { name: "فاضل هاشم فاضل", pdf: "certificates/Fadhil Hashim Fadhil.pdf" },
-    { name: "حسن محمد خليل", pdf: "certificates/hassan_moh.pdf" },
+    { name: "حسن محمد خليل", pdf: "certificates/Hasan mohammed khalil.pdf" },
     { name: "أيمن خاطر عوض", pdf: "certificates/Ayman Khatar Awadh.pdf" },
     { name: "حسام الدين", pdf: "certificates/hesham_eldin.pdf" },
     { name: " همام احمد حسين", pdf: "certificates/همام احمد.pdf" },
