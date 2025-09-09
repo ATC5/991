@@ -39,12 +39,13 @@ var certificates = [
     { name: "حسين علوان خليل", pdf: "certificates/Hussein Alwan Khalil.pdf" },
     { name: "قمر سرمد محمد علي", pdf: "certificates/Qamar Sarmed Mohammed Ali.pdf" },
     { name: "نبأ عامر ناصر", pdf: "certificates/Nabaa Amer Nasser.pdf" },
-    { name: "هيثم فؤاد", pdf: "certificates/haitham_fouad.pdf" },
+    { name: "علي حسن فلاح", pdf: "certificates/ALI HASSAN FALAH.pdf" },
     { name: "زين عبدالحميد", pdf: "certificates/zein_abdulhamid.pdf" },
     { name: "منن مهند ناصر", pdf: "certificates/Minan Muhanned Nasser.pdf" },
     { name: "خليل إبراهيم", pdf: "certificates/khaleel_ibrahim.pdf" },
-    { name: "نادين يوسف", pdf: "certificates/nadeen_yousef.pdf" },
+    { name: "مرام محمد علي", pdf: "certificates/Maram Mohmeed Ali.pdf" },
     { name: "عباس فاضل", pdf: "certificates/Abbas Fadhil.pdf" },
     { name: "رزان محمد", pdf: "certificates/razan_mohamed.pdf" }
 ];
+
 
