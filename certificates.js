@@ -30,7 +30,7 @@ var certificates = [
     { name: "طارق زياد طارق", pdf: "certificates/Tariq Zeyad Tariq.pdf" },
     { name: "براء محمد مصعب", pdf: "certificates/Baraa Mohammed Musab.pdf" },
     { name: "ملاك هشام يوسف", pdf: "certificates/ملاك.pdf" },
-    { name: "بلال عمر", pdf: "certificates/bilal_omar.pdf" },
+    { name: "صقر حرب معن محمد", pdf: "certificates/صقر حرب معن محمد.pdf" },
     { name: "فرح محمد", pdf: "certificates/farah_mohamed.pdf" },
     { name: "جمال عاصف عبدالرزاق", pdf: "certificates/جمال.pdf" },
     { name: "فرقان محسن خليف", pdf: "certificates/فرقان.pdf" },
@@ -47,5 +47,6 @@ var certificates = [
     { name: "عباس فاضل", pdf: "certificates/Abbas Fadhil.pdf" },
     { name: "رزان محمد", pdf: "certificates/razan_mohamed.pdf" }
 ];
+
 
 
