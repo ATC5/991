@@ -1,107 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
-    <title>التحقق من الشهادة | الطيران والمراقبة الجوية</title>
-    <link rel="icon" href="img.img/1.jpg">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* تنسيقات إضافية لحالة التحميل والرسائل */
-        .loading { color: #1f3479; font-weight: bold; margin: 10px; display: none; }
-        .error-msg { color: red; font-weight: bold; margin: 10px; }
-        .success-box { border: 2px solid #2f701b; background-color: #f9fff9; padding: 20px; border-radius: 10px; margin-top: 20px; }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <header>
-            <img src="img.img/3.png" alt="شعار الموقع" class="logo">
-        </header>
-        
-        <h1>نظام التحقق من الشهادات</h1>
-        <p style="font-size: larger; color: #190d50; font-weight: bold;">المهندس: علي حيدر اموري</p>
-        
-        <div style="margin: 20px 0;">
-            <a href="winners.html">قائمة المشاركين (عام)</a>
-            <a href="https://www.instagram.com/krade3?igsh=MXBsd215dTh0OWp3aA==" target="_blank">اضغط هنا للاستفسار</a>
-        </div>
-
-        <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
-
-        <h3>أدخل رقم الشهادة للتحقق</h3>
-        <p style="font-size: small; color: #666;">مثال: ATC-25-001</p>
-        <p style="font-size: small; color: #666;">للتوضيح لا تظهر الشهادة لمن لا يمتلك الرقم السري</p>
-
-        <input type="text" id="certIdInput" placeholder="أدخل رقم الشهادة هنا...">
-        <button onclick="verifyCertificate()" style="background-color: #1f3479; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-family: 'Cairo';">تحقق الآن</button>
-        
-        <div id="loadingMessage" class="loading">جاري البحث في قاعدة البيانات...</div>
-        <div id="resultArea"></div>
-
-    </div>
-
-    <footer>
-        <p>جميع الحقوق محفوظة &copy; 2025</p>
-    </footer>
-
-    <script>
-        // هام جداً: ضع الرابط الذي نسخته من Google Script هنا
-        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw_XwHq45hyyOwT0KTKVe5Oi7P-LckolfGtXtTy4iq2KbW0IjlA-pt8F0sfoYt9Xu8S/exec"; 
-
-        function verifyCertificate() {
-            var certId = document.getElementById("certIdInput").value.trim();
-            var resultDiv = document.getElementById("resultArea");
-            var loadingDiv = document.getElementById("loadingMessage");
-
-            // تنظيف النتائج السابقة
-            resultDiv.innerHTML = "";
-            
-            if (certId === "") {
-                resultDiv.innerHTML = "<p class='error-msg'>يرجى كتابة رقم الشهادة أولاً.</p>";
-                return;
-            }
-
-            // إظهار رسالة التحميل
-            loadingDiv.style.display = "block";
-
-            // الاتصال بـ Google Script
-            fetch(GOOGLE_SCRIPT_URL + "?id=" + certId)
-            .then(response => response.json())
-            .then(data => {
-                loadingDiv.style.display = "none"; // إخفاء التحميل
-
-                if (data.found) {
-                    // تم العثور على الشهادة
-                    resultDiv.innerHTML = `
-                        <div class="success-box">
-                            <h2 style="color: #2f701b;">✅ شهادة معتمدة</h2>
-                            <p><strong>رقم الشهادة:</strong> ${certId}</p>
-                            <p><strong>اسم المتدرب:</strong> ${data.name}</p>
-                            <a href="${data.pdfPath}" target="_blank" style="font-size:18px;">📄 تحميل/عرض الشهادة</a>
-                        </div>
-                    `;
-                } else {
-                    // لم يتم العثور عليها
-                    resultDiv.innerHTML = `
-                        <div style="margin-top:20px;">
-                            <h3 class="error-msg">❌ لم يتم العثور على شهادة بهذا الرقم</h3>
-                            <p>تأكد من إدخال الرقم والشرحات (-) بشكل صحيح.</p>
-                        </div>
-                    `;
-                }
-            })
-            .catch(error => {
-                loadingDiv.style.display = "none";
-                console.error('Error:', error);
-                resultDiv.innerHTML = "<p class='error-msg'>حدث خطأ في الاتصال، يرجى المحاولة لاحقاً.</p>";
-            });
-        }
-    </script>
-
-</body>
-</html>
-
-
